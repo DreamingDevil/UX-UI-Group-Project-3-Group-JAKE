@@ -66,6 +66,7 @@ p4 {
 .navbar {
   display: flex;
   align-items: center;
+  background-color: #fffaee;
   padding: 12px 12px;
 }
 
