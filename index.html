@@ -28,7 +28,8 @@ h1 {
   font-family: "Montserrat", sand-serif;
   padding-top: 3rem;
   padding-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #404040;
 }
 
 p4 {
@@ -85,11 +86,13 @@ p4 {
 
 .get-now-button:hover {
   background: linear-gradient(45deg, #FFD466, #FF8594);
+  text-decoration: underline;
 }
 
 .get-now-button a {
   color: black;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* Hero Section */
@@ -118,7 +121,7 @@ p4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* Adjusted to hug the top of the container */
-  height: calc(100vh - 44px);
+  height: calc(100vh - 80px);
   padding: 0 10%;
 }
 
@@ -130,6 +133,34 @@ p4 {
   padding-top: 20vh;
 }
 
+.heroButton {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 48px;
+  padding-right: 48px;
+  border-radius: 6px;
+  background-color: #FFD466;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  transition: background-color 0.5s ease;
+}
+
+.heroButton:hover {
+  background: linear-gradient(45deg, #FFD466, #FF8594);
+  text-decoration: underline;
+}
+
+.left-content {
+  margin-right: 5vw;
+  /* border: 1px solid red; */
+}
+
+.right-content {
+  /* border: 1px solid red; */
+  margin-left: 5vw;
+}
+
 /* Footer Bar */
 
 
@@ -138,7 +169,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #404040;
     padding: 2rem 0;
   }
 footer div {
@@ -149,7 +180,7 @@ footer div {
 footer div a {
   margin: 0 1rem;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 footer div a:hover {
@@ -166,10 +197,31 @@ footer div ul {
 
 footer div ul li {
   margin: 0 0.5rem;
+  color: white;
+}
+
+/* Hero Animations */
+
+.animated-logo {
+  opacity: 0; /* Initially hide the logo */
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animated-video {
+  opacity: 0; /* Initially hide the video */
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Add fade-in effect */
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 </style>
 </head>
-<header>
+<header class="fixed-header">
   <div class="navbar">
     <div class="logo">
       <a href="#">
@@ -182,28 +234,33 @@ footer div ul li {
       <a href="#">Pricing</a>
     </div>
     <div class="get-now-button">
-      <a href="#">Download Now</a>
+      <a href="#">Try Now</a>
       <div class="gradient-overlay"></div>
     </div>
   </div>  
 </header>
 
 <body>
+
   <section class="heroImg">
     <div class="container">
       <div class="left-content">
         <img class="heroLogo animated-logo" src="images/splitway_logo_light.svg">
-        <h1>Split the Gas<br>Split the Way</h1>
-        <a class="heroButton" href="#">Download Now</a>
+        <div class="h1-container">
+          <h1 class="h1-left">Split the Gas,</h1>
+          <h1 class="h1-right">Split the Way</h1>
+        </div>
+        <a class="heroButton" href="#">Try Now</a>
       </div>
       <div class="right-content">
-        <video class="animated-video width="640" height="480" autoplay muted loop>
+        <video class="animated-video" width="640" height="480" autoplay muted loop>
           <source src="images/splitway_hero_video.mp4" type="video/mp4">
         Your browser does not support the video tag
         </video>
       </div>
     </div>
   </section>
+
   <footer>
     <div>
       <a href="/UX_UI_HW_19/index.html">Product</a>

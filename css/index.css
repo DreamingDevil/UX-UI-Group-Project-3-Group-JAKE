@@ -23,12 +23,44 @@ h1 {
   color: #404040;
 }
 
+.h1-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.h1-left {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #404040;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.h1-right {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #404040;
+  margin: 0;
+  padding-top: 6rem;
+  text-align: right;
+}
+
 p4 {
   font-size: .75rem;
 }
 
 
 /* Navigation Bar */
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000; /* Ensure the header is above other elements */
+}
+
 
 .navbar {
   display: flex;
@@ -77,11 +109,13 @@ p4 {
 
 .get-now-button:hover {
   background: linear-gradient(45deg, #FFD466, #FF8594);
+  text-decoration: underline;
 }
 
 .get-now-button a {
   color: black;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* Hero Section */
@@ -90,7 +124,7 @@ p4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 44px);
+  height: 100vh;
 }
 
 .heroLogo {
@@ -123,13 +157,14 @@ p4 {
 }
 
 .heroButton {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 48px;
   padding-right: 48px;
   border-radius: 6px;
   background-color: #FFD466;
   text-decoration: none;
+  font-weight: 500;
   color: black;
   transition: background-color 0.5s ease;
 }
@@ -140,13 +175,13 @@ p4 {
 }
 
 .left-content {
-  margin-right: 5vw;
+  margin-right: 0vw;
   /* border: 1px solid red; */
 }
 
 .right-content {
   /* border: 1px solid red; */
-  margin-left: 5vw;
+  margin-left: -5vw;
 }
 
 /* Footer Bar */
