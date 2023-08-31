@@ -228,12 +228,6 @@ footer div ul li {
 
 /* Hero Animations */
 
-.animated-logo {
-  opacity: 0; /* Initially hide the logo */
-  transform: translateX(-100%);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
 .animated-video {
   opacity: 0; /* Initially hide the video */
   transform: translateX(100%);
