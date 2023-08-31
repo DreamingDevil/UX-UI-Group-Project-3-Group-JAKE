@@ -43,3 +43,21 @@ $(document).ready(function() {
     });
   }, 2000); // Delay of 2000 milliseconds (2 seconds)
 });
+
+
+// Wait for the document to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the "Try Now" button element
+  const tryNowButton = document.querySelector('.try-now-link');
+
+  // Add a mouseover event listener to the button
+  tryNowButton.addEventListener('mouseover', function () {
+    // Add a class to trigger the shaking animation
+    tryNowButton.classList.add('shake-animation');
+
+    // Remove the class after a short delay to stop the animation
+    setTimeout(() => {
+      tryNowButton.classList.remove('shake-animation');
+    }, 1000); // Adjust the delay duration as needed
+  });
+});

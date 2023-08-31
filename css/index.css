@@ -58,7 +58,7 @@ p4 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fffaee;
   z-index: 1000; /* Ensure the header is above other elements */
 }
 
@@ -66,7 +66,6 @@ p4 {
 .navbar {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 12px;
 }
 
@@ -126,6 +125,7 @@ p4 {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #fffaee;
 }
 
 .heroLogo {
