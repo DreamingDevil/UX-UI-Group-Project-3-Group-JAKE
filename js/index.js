@@ -20,5 +20,5 @@ $(document).ready(function() {
       // Add fade-in class to the specified elements
       $(".h1-container, p, .heroButton").addClass("fade-in");
     });
-  }, 2000);
+  }, 1000);
 });
