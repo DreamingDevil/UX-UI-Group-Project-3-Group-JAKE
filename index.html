@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/index.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
-  /* HTML CSS */
+/* HTML CSS */
 html {
   scroll-behavior: smooth;
 }
@@ -40,28 +40,31 @@ p4 {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 12px 12px;
 }
+
 .logo {
-  flex: 1;
-  font-size: 24px;
   margin-left: 10vw;
+  font-size: 24px;
+  margin-right: 3rem; /* Add margin to separate the logo from links */
 }
+
 .logo img {
-  height: 44px;
-  vertical-align: middle;
+  height: 50px;
 }
+
 .nav-links {
-  flex: 2;
-  text-align: left;
+  display: flex;
+  align-items: center;
 }
+
 .nav-links a {
   color: black;
   text-decoration: none;
-  margin: 0 20px;
+  margin-right: 3.5rem;
+  
 }
 
 .nav-links a:hover {
@@ -69,7 +72,7 @@ p4 {
 }
 
 .get-now-button {
-  /* border: 1px solid red; */
+  margin-left: auto;
   margin-right: 10vw;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -111,19 +114,33 @@ p4 {
   text-decoration: underline;
 }
 
-/* Footer Bar */
-
-footer {
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background-color: white;
-  padding: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  justify-content: space-between;
+  align-items: flex-start; /* Adjusted to hug the top of the container */
+  height: calc(100vh - 44px);
+  padding: 0 10%;
 }
 
+.left-content, .right-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20vh;
+}
+
+/* Footer Bar */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 2rem 0;
+  }
 footer div {
   display: flex;
   justify-content: center;
@@ -140,6 +157,16 @@ footer div a:hover {
   cursor: pointer;
 }
 
+footer div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer div ul li {
+  margin: 0 0.5rem;
+}
 </style>
 </head>
 <header>
@@ -161,14 +188,16 @@ footer div a:hover {
   </div>  
 </header>
 
-1<body>
+<body>
   <section class="heroImg">
     <div class="container">
       <div class="left-content">
-        <img class="heroLogo" src="images/splitway_logo_light.svg">
+        <img class="heroLogo animated-logo" src="images/splitway_logo_light.svg">
+        <h1>Split the Gas, Split the Way</h1>
+        <a class="heroButton" href="#">Download Now</a>
       </div>
       <div class="right-content">
-        <video width="640" height="480" autoplay muted loop>
+        <video class="animated-video width="640" height="480" autoplay muted loop>
           <source src="images/splitway_hero_video.mp4" type="video/mp4">
         Your browser does not support the video tag
         </video>
@@ -180,13 +209,11 @@ footer div a:hover {
       <a href="/UX_UI_HW_19/index.html">Product</a>
       <a href="/UX_UI_HW_18/index.html">Our Story</a>
       <a href="/UX_UI_HW_20/index.html">Pricing</a>
-      <a href="#"><ul>Follow Us</ul></a>
+      <ul>
+        <li>Follow Us</li>
+      </ul>
     </div>
   </footer>
-    <p4>2023 Splitway.com. All right reserved.</p4>
-
-
-
 </body>
 <script src="js/index.js"></script>
 </html>

@@ -19,7 +19,8 @@ h1 {
   font-family: "Montserrat", sand-serif;
   padding-top: 3rem;
   padding-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #404040;
 }
 
 p4 {
@@ -37,8 +38,13 @@ p4 {
 }
 
 .logo {
+  margin-left: 10vw;
   font-size: 24px;
-  margin-right: 20px; /* Add margin to separate the logo from links */
+  margin-right: 3rem; /* Add margin to separate the logo from links */
+}
+
+.logo img {
+  height: 50px;
 }
 
 .nav-links {
@@ -49,7 +55,8 @@ p4 {
 .nav-links a {
   color: black;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 3.5rem;
+  
 }
 
 .nav-links a:hover {
@@ -102,34 +109,40 @@ p4 {
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: calc(100vh - 44px);
+  align-items: flex-start; /* Adjusted to hug the top of the container */
+  height: calc(100vh - 80px);
   padding: 0 10%;
 }
 
-.left-content {
+.left-content, .right-content {
   flex: 1;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20vh;
+}
+
+.left-content {
+  margin-right: 5vw;
+  /* border: 1px solid red; */
 }
 
 .right-content {
-  flex: 1;
-  padding-left: 20px;
+  /* border: 1px solid red; */
+  margin-left: 5vw;
 }
 
 /* Footer Bar */
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background-color: white;
-  padding: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #404040;
+    padding: 2rem 0;
+  }
 footer div {
   display: flex;
   justify-content: center;
@@ -138,10 +151,42 @@ footer div {
 footer div a {
   margin: 0 1rem;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 footer div a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+footer div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+footer div ul li {
+  margin: 0 0.5rem;
+  color: white;
+}
+
+/* Hero Animations */
+
+.animated-logo {
+  opacity: 0; /* Initially hide the logo */
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.animated-video {
+  opacity: 0; /* Initially hide the video */
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Add fade-in effect */
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
