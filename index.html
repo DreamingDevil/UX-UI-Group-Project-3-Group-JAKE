@@ -1,82 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splitway Hero page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
+  /* HTML CSS */
+html {
+  scroll-behavior: smooth;
+}
 
-  .container {
-    width: 390px;
-    height: 844px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* Body CSS */
 
-  .navigation-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end; /* Align to the bottom */
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 10px 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-repeat: none;
+  background-size: cover;
+}
 
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/* Font Sizes */
 
-  .nav-icon {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
+h1 {
+  font-family: "Montserrat", sand-serif;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
 
-  .nav-text {
-    font-size: 14px;
-  }
+p4 {
+  font-size: .75rem;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 12px;
+}
+.logo {
+  flex: 1;
+  font-size: 24px;
+  margin-left: 10vw;
+}
+.logo img {
+  height: 44px;
+  vertical-align: middle;
+}
+.nav-links {
+  flex: 2;
+  text-align: left;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.get-now-button {
+  /* border: 1px solid red; */
+  margin-right: 10vw;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 6px;
+  background-color: #FFD466;
+  transition: background-color 0.5s ease;
+}
+
+.get-now-button:hover {
+  background: linear-gradient(45deg, #FFD466, #FF8594);
+}
+
+.get-now-button a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Hero Section */
+
+.heroImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 44px);
+}
+
+.heroLogo {
+  height: 128px;
+}
+
+.content a {
+  text-decoration: none;
+  color: black;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bar */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+}
+
+footer div a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+footer div a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 </style>
-<title>Centered Container with Navigation</title>
 </head>
-<body>
-  <div class="container">
-    <!-- Content inside the container goes here -->
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="images/splitway_s_light.svg" alt="Logo">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="#">Product</a>
+      <a href="#">Our Story</a>
+      <a href="#">Pricing</a>
+    </div>
+    <div class="get-now-button">
+      <a href="https://www.linkedin.com/in/kennethsuli/">Get Now</a>
+      <div class="gradient-overlay"></div>
+    </div>
+  </div>  
+</header>
 
-    <div class="navigation-bar">
-      <div class="nav-item">
-        <div class="nav-icon">Icon 1</div>
-        <div class="nav-text">Button 1</div>
+1<body>
+  <section class="heroImg">
+    <div class="container">
+      <div class="left-content">
+        <img class="heroLogo" src="images/splitway_logo_light.svg">
       </div>
-      <div class="nav-item">
-        <div class="nav-icon">Icon 2</div>
-        <div class="nav-text">Button 2</div>
-      </div>
-      <div class="nav-item">
-        <div class="nav-icon">Icon 3</div>
-        <div class="nav-text">Button 3</div>
-      </div>
-      <div class="nav-item">
-        <div class="nav-icon">Icon 4</div>
-        <div class="nav-text">Button 4</div>
-      </div>
-      <div class="nav-item">
-        <div class="nav-icon">Icon 5</div>
-        <div class="nav-text">Button 5</div>
+      <div class="right-content">
+        <video width="640" height="480" autoplay muted loop>
+          <source src="images/splitway_hero_video.mp4" type="video/mp4">
+        Your browser does not support the video tag
+        </video>
       </div>
     </div>
-  </div>
+  </section>
+  <footer>
+    <div>
+      <a href="/UX_UI_HW_19/index.html">Product</a>
+      <a href="/UX_UI_HW_18/index.html">Our Story</a>
+      <a href="/UX_UI_HW_20/index.html">Pricing</a>
+      <a href="#"><ul>Follow Us</ul></a>
+    </div>
+  </footer>
+    <p4>2023 Splitway.com. All right reserved.</p4>
+
+
+
 </body>
+<script src="js/index.js"></script>
 </html>
